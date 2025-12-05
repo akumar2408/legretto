@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Nunito:wght@400;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  @apply bg-table text-slate-100 font-body min-h-screen;
+  background: radial-gradient(circle at 20% 20%, rgba(255, 60, 56, 0.08), transparent 35%),
+    radial-gradient(circle at 80% 10%, rgba(45, 127, 228, 0.12), transparent 35%),
+    radial-gradient(circle at 40% 80%, rgba(0, 196, 140, 0.12), transparent 40%),
+    #080c17;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.card {
+  @apply rounded-xl border border-white/10 bg-card/90 shadow-card backdrop-blur-sm transition-transform duration-200;
+}
+
+.card.playable {
+  @apply ring-2 ring-amber-300/80 shadow-lg shadow-amber-300/20 scale-[1.02];
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+::selection {
+  background: rgba(255, 191, 31, 0.35);
+  color: #0b1021;
+}
